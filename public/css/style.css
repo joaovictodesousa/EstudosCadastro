@@ -1,0 +1,173 @@
+@import url(cabecalho.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.alert_sucesso {
+    background-color: rgb(7, 210, 7);
+    color: white;
+    padding: 1em;
+    margin: 1em 0;
+    width: 20%;
+    border-radius: 15px;
+}
+
+.alert_danger {
+    background-color: rgb(244, 45, 45);
+    color: white;
+    padding: 1em;
+    margin: 1em 0;
+    width: 20%;
+    border-radius: 15px;
+}
+
+li {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#tabela {
+    width: 60%; 
+    margin: auto;
+}
+
+tr.even-row {
+    background-color: black;
+}
+
+/* Estilo para linhas ímpares */
+tr:nth-child(even) {
+    background:rgb(225, 224, 224);
+  }
+
+td {
+    width: 20%;
+    font-size: 20px;
+}
+
+th {
+    font-size: 20px;
+    padding: 0 10px;
+    color: black;
+    font-size: 25px;
+}
+
+.butao_cadastrar {
+    background-color: rgb(2, 179, 2);
+    padding: 12px 1em;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.butao_pesquisar {
+    background-color: dodgerblue;
+    padding: 12px 1em;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.butao_cancelar {
+    background-color: red;
+    padding: 12px 1em;
+    color: white;
+    border-radius: 10px;
+    border: none; 
+    text-decoration: none;
+}
+
+.butao_cadastrar:hover {
+    background-color: rgb(6, 195, 6);
+}
+
+.butao {
+    background-color: red;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.butao_edit {
+    font-size: 18px;
+    padding: 10px 14px;
+    text-decoration: none;
+    background-color: gray;
+    border-radius: 10px;
+    color: white;
+}
+
+.th_acoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;  
+}
+
+.linhadocadastrar {
+    background-color: black;
+    width: 100%;
+    padding: 2px 0 0 0;
+    margin: 0 0 2em 0;
+}
+
+.container_form {
+    width: 100%;    
+}
+
+.container_campos  {
+    display: flex;
+    margin: 0 0 0 10em;
+}
+
+.container_acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.container_button {
+    display: block;
+}
+
+input {
+   width: 50%;
+   padding: 10px 10px;
+   border-radius: 15px;
+   border: 3px solid rgb(161, 161, 161);
+   font-size: 20px;
+}
+
+.input_btn {
+    display: flex;
+    gap: 1em;
+}
+
+.input-container {
+    display: grid;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container_paginate {
+    margin: 0 0 0 25em;
+}
+
+#btn {
+    padding: 11px 1em;
+}
+
+.alert_naoencontrado {
+    text-align: center;
+    font-size: 25px;
+}

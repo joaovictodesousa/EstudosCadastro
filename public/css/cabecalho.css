@@ -1,0 +1,24 @@
+header {
+    background-color: darkgoldenrod;
+    padding: 10px;
+}
+
+.titulo_header {
+    text-align: center;
+    font-size: 25px;
+}
+
+.link_trol {
+    text-decoration: none;
+    background-color: red;
+    padding: 1em;
+    color: white;
+    border-radius: 20px;
+}
+
+.container_trol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50em 0 1em 0;
+}
