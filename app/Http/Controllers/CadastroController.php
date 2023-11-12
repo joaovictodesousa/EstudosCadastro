@@ -18,18 +18,28 @@ class CadastroController extends Controller
 
     public function index(Request $request)
     {
+        // Obtém o valor do parâmetro de consulta 'search' da solicitação HTTP. Se não houver nenhum valor, define uma string vazia como padrão.
         $search = $request->input('search', '');
     
+        // Inicia uma consulta no modelo Cadastro. O modelo representa geralmente uma tabela no banco de dados.
         $query = Cadastro::query();
     
+        // Verifica se a variável $search não está vazia. Se não estiver vazia, adiciona uma cláusula WHERE à consulta para filtrar os resultados.
         if (!empty($search)) {
-            $search = mb_strtolower($search, 'UTF-8'); // Converter pesquisa para minúsculas
+            // Converte a pesquisa para minúsculas
+            $search = mb_strtolower($search, 'UTF-8');
+            // Adiciona a condição de pesquisa à consulta
             $query->whereRaw('lower(name) LIKE ?', ["%$search%"]);
         }
     
+        // Executa a consulta, ordena os resultados pelo campo 'id' em ordem decrescente e os pagina em grupos de 10 resultados por página.
         $Allcadastros = $query->orderBy('id', 'desc')->paginate(10);
     
+        // Retorna a visão 'welcome' com os resultados da pesquisa, a variável de pesquisa $search e a lista paginada de cadastros $Allcadastros.
         return view('welcome', ['Allcadastros' => $Allcadastros, 'search' => $search]);
+
+
+        // a variável $search é usada para realizar uma pesquisa no banco de dados.
     }
     
  
@@ -104,9 +114,9 @@ class CadastroController extends Controller
     
     public function gerarPDF(Request $request)
     {
-        $search = $request->input('search', '');
+        $search = $request->input('search', ''); 
         
-        $query = Cadastro::query();
+        $query = Cadastro::query();  // Faz um busca no CADASTRO
         
         if (!empty($search)) {
             $query->where('name', 'LIKE', "%$search%");
